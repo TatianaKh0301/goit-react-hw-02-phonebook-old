@@ -1,13 +1,14 @@
 import React from "react";
+import { ItemContact, Name, Number, ButtonDelete } from './ItemContacts.styled';
 
 const ItemContacts = ({ id, name, number, onDeleteContact}) => (
-    <li key={id}>
-        <p>{name}</p>
-        <p>{number}</p>
-        <button type="button" onClick={() => onDeleteContact(id)}>
+    <ItemContact key={id}>
+        <Name>{name}</Name>
+        <Number>{number}</Number>
+        <ButtonDelete type="button" onClick={() => onDeleteContact(id)}>
             DELETE
-        </button>
-    </li>
+        </ButtonDelete>
+    </ItemContact>
 );
 
 export default ItemContacts;

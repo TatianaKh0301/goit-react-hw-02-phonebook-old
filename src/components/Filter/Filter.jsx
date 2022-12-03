@@ -1,13 +1,14 @@
 import React from "react";
+import { LabelFilter, LabelWrap, InputFilter } from "./Filter.styled";
 
 const Filter = ({value, onChange}) => (
-    <label>Find contacts by name
-        <input 
+    <LabelFilter><LabelWrap>Find contacts by name</LabelWrap>
+        <InputFilter 
             type="text" 
             value={value} 
-            onChange={onChange}>
-        </input>
-    </label>
+            onChange={onChange}
+        />
+    </LabelFilter>
 );
 
 export default Filter;

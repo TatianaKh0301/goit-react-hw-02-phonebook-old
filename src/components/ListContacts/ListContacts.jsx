@@ -1,15 +1,16 @@
 import ItemContacts from "components/ItemContacts";
 import React from "react";
+import { ContactsWrap, ContactsTitle, ContactsList} from './ListContacts.styled';
 
 const ListContacts = ({ contacts, onDeleteContact }) => (
-    <div>
-        <h2>Contacts</h2>
-        <ul>
+    <ContactsWrap>
+        <ContactsTitle>Contacts</ContactsTitle>
+        <ContactsList>
             {contacts.map(({ id, name, number }) => (
                 <ItemContacts id={id} name={name} number={number} onDeleteContact = {onDeleteContact}/>
             ))}
-        </ul>
-    </div>    
+        </ContactsList>
+    </ContactsWrap>    
 );
 
 export default ListContacts;
