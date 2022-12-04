@@ -1,14 +1,22 @@
 import React from "react";
-import { ItemContact, Name, Number, ButtonDelete } from './ItemContacts.styled';
+import { FaMobileAlt } from "react-icons/fa";
+import { ItemContactWrap, ContactWrap, NameWrap, Name, Number, ButtonDelete } from './ItemContacts.styled';
 
-const ItemContacts = ({ id, name, number, onDeleteContact}) => (
-    <ItemContact key={id}>
-        <Name>{name}</Name>
-        <Number>{number}</Number>
+const ItemContact = ({ id, name, number, onDeleteContact}) => (
+    <ItemContactWrap>
+        <ContactWrap>
+            <NameWrap>
+                <FaMobileAlt />
+                <Name>{name}</Name>
+            </NameWrap>
+            
+            <Number>{number}</Number>
+        </ContactWrap>
+        
         <ButtonDelete type="button" onClick={() => onDeleteContact(id)}>
             DELETE
         </ButtonDelete>
-    </ItemContact>
+    </ItemContactWrap>
 );
 
-export default ItemContacts;
+export default ItemContact;

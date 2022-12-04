@@ -29,20 +29,24 @@ class App extends Component {
       number,
     };
 
-    if (this.disableDuplicateNames()) {
-      console.log('DuplicateNames');
-    }
-
+    // this.setState(prevState => ({
+    //       contacts: prevState.contacts.find(contact => contact.name === name),
+    //     }));
+        
     this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
     }));
+
+    // this.disableDuplicateNames(name);
   };
 
-  disableDuplicateNames = ( name ) => {
-    this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.name === name),
-    }));
-  };
+  // disableDuplicateNames = () => {
+    // console.log("name", name);
+  //   this.setState(prevState => ({
+  //     contacts: prevState.contacts.find(contact => contact.name === name),
+  //   }));
+  //   console.log("Duplicate!!!");
+  // };
 
   deleteContact = (contactId) => {
     this.setState(prevState => ({

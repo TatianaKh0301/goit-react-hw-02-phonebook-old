@@ -2,13 +2,13 @@ import styled from '@emotion/styled';
 import bgImage from 'image/bgImage.jpg';
 
 export const Container = styled.div`
-    height: 100vh;
+    height: 120vh;
     width: 90vw;
     background-image: url(${bgImage});
     background-size: cover;
     background-position: center;
     color: black;
-    padding: 50px;
+    padding: 20px;
     margin: 0 auto;
 `;
 

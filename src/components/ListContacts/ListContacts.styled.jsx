@@ -12,4 +12,9 @@ export const ContactsTitle = styled.h1`
 `;
 
 export const ContactsList = styled.ul`
+    list-style: none;
+`;
+
+export const Item = styled.li`
+
 `;
